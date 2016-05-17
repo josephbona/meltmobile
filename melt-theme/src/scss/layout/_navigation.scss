@@ -1,0 +1,141 @@
+.site-navigation {
+	float: right;
+
+	li {
+		padding-left: 15px;
+		padding-right: 15px;
+		a {
+			position: relative;
+			font-weight: 300;
+			text-transform: uppercase;
+			font-size: 22px;
+			color: $brand-info;
+			padding-left: 0;
+			padding-right: 0;
+			font-family: $font-family-serif;
+
+			&:after {
+				content: '';
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 0px;
+				position: absolute;
+				background-color: $brand-warning;
+			}
+			&:hover, &:focus {
+				background: none;
+
+				&:after {
+					height: 6px;
+				}
+			}
+		}
+		&.open {
+			>a, >a:hover, >a:focus {
+				background: none;
+
+				&:after {
+					height: 6px;
+				}
+			}
+		}
+		.phone-number {
+			@include text-shadow(1px, 1px, 0px, darken($brand-primary, 10%));
+			background: none;
+			color: $brand-info;
+			font-size: 30px;
+			letter-spacing: .50px;
+
+			&:hover, &:focus {
+				background: none;
+			}
+		}
+	}
+	.navbar-nav>li:last-child {
+		padding-right: 0;
+
+		a {
+			@include linear-gradient(lighten($brand-warning, 4%), $brand-warning);
+			padding-left: 15px;
+			padding-right: 15px;
+			color: $brand-primary;
+			font-weight: bold;
+			font-size: 22px;
+
+			i {
+				margin-right: 8px;
+				font-size: 90%;
+				vertical-align: bottom;
+			}
+			&:after {
+				content: none;
+			}
+			&:hover, &:focus {
+				@include linear-gradient(lighten($brand-warning, 6%), lighten($brand-warning, 2%));
+			}
+		}
+	}
+	.dropdown-menu {
+		margin-top: -1px !important;
+		left: 50%;
+		@include translate(-50%, 0);
+		background-color: white;
+		text-align: center;
+
+		&:before {
+			font-family: 'FontAwesome';
+			content: '\f0d7';
+			position: absolute;
+			top: -10px;
+			left: 50%;
+			@include translate(-50%, 0);
+			color: $brand-warning;
+		}
+		li {
+			a {
+				color: $brand-primary;
+				font-size: 20px;
+				font-weight: normal;
+
+				&:after {
+					content: none;
+				}
+				&:hover, &:focus {
+					color: $brand-primary;
+				}
+			}
+		}
+	}
+}
+.nav > li:hover a {
+	&:after {
+		height: 6px;
+	}
+}
+.navbar-toggle {
+	float: right;
+	color: $brand-info;
+	padding: 0;
+	margin: 0;
+	font-size: 25px;
+	width: 40px;
+	height: 40px;
+	margin: 17.5px 0;
+
+	i {
+		vertical-align: middle;
+		margin-top: -8px;
+	}
+}
+.mobile-clearfix {
+	@include max-width($grid-float-breakpoint-max) {
+		@include clearfix();
+	}
+}
+.navbar-collapse {
+	@include min-width($grid-float-breakpoint) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

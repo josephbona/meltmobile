@@ -1,0 +1,151 @@
+.social-links {
+
+///////////////////////////////////////////////////////////////////////////////////
+
+	// set to true if you want the social link color to show on hover
+	$color-on-hover: false !default;
+	// color links will start at if '$color-on-hover:true'
+	$links-start-bg-color: #FFF;
+	$links-start-color: darken($brand-primary,10%);
+
+	// social links settings
+	$links-border-radius: 100px;
+	$links-size: 45px;
+	$links-color: #FFF;
+	$links-spacing: 10px;
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+	@extend .list-unstyled;
+
+	li {
+		float: left;
+
+		a {
+			display: inline-block;
+			text-align: center;
+			@include border-radius($links-border-radius);
+			width: $links-size;
+			height: $links-size;
+			line-height: $links-size;
+			color: $links-color;
+			font-size: $links-size/2;
+
+			&:hover {
+				color: $links-color;
+			}
+		}
+
+		@if $color-on-hover == true {
+			a {
+				background-color: $links-start-bg-color;
+				color: $links-start-color;
+
+				&:hover {
+					background-color: $links-start-bg-color;
+					color: darken($links-start-color,8%);
+				}
+			}
+			// &.facebook a {
+			// 	background-color: $links-start-bg-color;
+			// 		&:hover {
+			// 			background-color:#3C5B9B;
+			// 			color: #FFF;
+			// 		}
+			// }
+			// &.twitter a {
+			// 	background-color: $links-start-bg-color;
+			// 		&:hover {
+			// 			background-color:#2CAAE1;
+			// 			color: #FFF;
+			// 		}
+			// }
+			// &.youtube a {
+			// 	background-color: $links-start-bg-color;
+			// 		&:hover {
+			// 			background-color:#D02022;
+			// 			color: #FFF;
+			// 		}
+			// }
+			// &.pinterest a {
+			// 	background-color: $links-start-bg-color;
+			// 		&:hover {
+			// 			background-color:#CB2027;
+			// 			color: #FFF;
+			// 		}
+			// }
+			// &.google-plus a {
+			// 	background-color: $links-start-bg-color;
+			// 		&:hover {
+			// 			background-color:#F63E27;
+			// 			color: #FFF;
+			// 		}
+			// }
+			// &.linkedin a {
+			// 	background-color: $links-start-bg-color;
+			// 		&:hover {
+			// 			background-color:#0073B2;
+			// 			color: #FFF;
+			// 		}
+			// }
+			// &.yelp a {
+			// 	background-color: $links-start-bg-color;
+			// 		&:hover {
+			// 			background-color:#C41200;
+			// 			color: #FFF;
+			// 		}
+			// }
+			// &.github a {
+			// 	background-color: $links-start-bg-color;
+			// 		&:hover {
+			// 			background-color:#262626;
+			// 			color: #FFF;
+			// 		}
+			// }
+			// &.rss a {
+			// 	background-color: $links-start-bg-color;
+			// 		&:hover {
+			// 			background-color:#F18420;
+			// 			color: #FFF;
+			// 		}
+			// }
+		} @else {
+			&.facebook a {
+				background-color:#3C5B9B;
+			}
+			&.twitter a {
+				background-color:#2CAAE1;
+			}
+			&.youtube a {
+				background-color:#D02022;
+			}
+			&.pinterest a {
+				background-color:#CB2027;
+			}
+			&.google-plus a {
+				background-color:#F63E27;
+			}
+			&.linkedin a {
+				background-color:#0073B2;
+			}
+			&.yelp a {
+				background-color:#C41200;
+			}
+			&.github a {
+				background-color:#262626;
+			}
+			&.rss a {
+				background-color:#F18420;
+			}
+			&.instagram a {
+				background-color:#084E7D;
+			}
+		}
+
+
+		&+ li {
+			margin-left: $links-spacing;
+		}
+	}
+}

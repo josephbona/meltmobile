@@ -1,0 +1,55 @@
+.map-finder {
+	position: relative;
+	background: url('../images/map.jpg') bottom;
+	background-size: cover;
+	height: 275px;
+	padding-top: 100px;
+	border-top: 3px solid lighten($brand-primary, 5%);
+
+	.finder-logo {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		top: -25px;
+		z-index: 5;
+
+		img {
+			height: 130px;
+		}
+	}
+	.finder {
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		@include translate(-50%, 50%);
+		width: 300px;
+		background: rgba($brand-primary, .85);
+		padding: 3px;
+		@include border-radius(4px);
+		margin-top: 15px;
+
+		.finder-row {
+			@include make-row(0);
+		}
+		.finder-icon {
+			@include make-xs-column(2, 0);
+			text-align: center;
+			background: $brand-warning;
+
+			i {
+				color: $brand-primary;
+				font-size: 28px;
+				line-height: 49px;
+			}
+		}
+		.finder-input {
+			@include make-xs-column(10, 0);
+		}
+		input {
+			@include border-radius(0);
+			border-color: transparent;
+			text-align: center;
+			font-size: 14px;
+		}
+	}
+}

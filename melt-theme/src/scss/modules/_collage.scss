@@ -1,0 +1,58 @@
+.collage {
+	position: relative;
+    width: 100%;
+    max-width: inherit;
+    overflow: hidden;
+    height: auto;
+    background: transparent;
+    height: 500px;
+
+    @include min-width($screen-md-min) {
+        padding: 0;
+    }
+
+	.caption {
+		padding: 2px;
+		border: 1px solid white;
+		z-index: 2;
+        margin: auto;
+        position: absolute;
+        @include center(xy);
+        width: 95%;
+
+        @include min-width(500px) {
+            width: 85%;
+        }
+        @include min-width($screen-md-min) {
+            width: auto;
+        }
+	}
+    .photos {
+    	z-index: 1;
+    	position: absolute;
+	    height: 100%;
+	    width: 3598px;
+	    background: transparent url(../images/collage.jpg) repeat-x left top;
+	    transform: translate3d(0, 0, 0);
+	    animation: collage 100s linear infinite;
+    }
+    .section-home__box {
+    	width: 100%;
+    	background: white;
+    	padding: 1.5em;
+    	text-align: center;
+
+    	.line {
+    		margin-left: auto;
+    		margin-right: auto;
+    	}
+        @include min-width($screen-md-min) {
+            padding: 3em 2em;
+        }
+    }
+}
+// collage marquee
+@keyframes collage{
+	0%{-webkit-transform:translate3d(0, 0, 0);-moz-transform:translate3d(0, 0, 0);-ms-transform:translate3d(0, 0, 0);-o-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}
+	100%{-webkit-transform:translate3d(-1800px, 0, 0);-moz-transform:translate3d(-1800px, 0, 0);-ms-transform:translate3d(-1800px, 0, 0);-o-transform:translate3d(-1800px, 0, 0);transform:translate3d(-1800px, 0, 0)}
+}

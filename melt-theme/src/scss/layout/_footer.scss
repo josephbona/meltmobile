@@ -1,0 +1,22 @@
+.site-footer {
+	background-color: #431611;
+	background-image: url(../images/texture.png);
+	padding: 20px 0;
+	h2 {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		color: $brand-info;
+	}
+	.social-links {
+		display: table;
+		margin: 10px auto 0;
+	}
+}
+.copyright {
+	background: darken($brand-primary, 5%);
+	color: $brand-info;
+	text-align: center;
+	font-size: 18px;
+	padding: 4px 0;
+}

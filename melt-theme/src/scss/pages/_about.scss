@@ -1,0 +1,28 @@
+.page-about {
+	.section{
+		padding: 30px 0;
+
+		&-quote {
+			padding: 60px 0;
+		}
+	}
+}
+.section-quote {
+	margin: 40px 0;
+	padding: 50px 0;
+	background: $brand-primary;
+	blockquote {
+		border: none;
+		padding: 0;
+		text-align: center;
+		color: white;
+		font-weight: 300;
+		font-size: 22px;
+		strong {
+			font-weight: 400;
+		}
+	}
+	.line {
+		border-color: $brand-warning;
+	}
+}

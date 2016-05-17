@@ -1,0 +1,130 @@
+.menu-card {
+	&__content {
+		max-width: 960px;
+		padding: 2em;
+		margin: 20px auto;
+		// background: url(../images/grate.png) -30px 20% no-repeat,
+		// 			url(../images/cheese.png) 103% 50% no-repeat,
+		// 			url(../images/wheelocheese.png) -60px 80% no-repeat;
+		// background-color: #FFFEDA;
+		background: url(../images/chalk-bg.jpg);
+		position: relative;
+		box-shadow: 0 0 20px rgba(black, 0.30);
+
+		.corner {
+			position: absolute;
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+
+			&.topleft {
+				left: -3px;
+				top: -3px;
+				border-width: 40px 40px 0 0;
+				border-color: $brand-primary transparent transparent transparent;
+			}
+			&.topright {
+				right: -3px;
+				top: -3px;
+				border-width: 0 40px 40px 0;
+				border-color: transparent $brand-primary transparent transparent;
+			}
+			&.bottomleft {
+				left: -3px;
+				bottom: -3px;
+				border-width: 40px 0 0 40px;
+				border-color: transparent transparent transparent $brand-primary;
+			}
+			&.bottomright {
+				bottom: -3px;
+				right: -3px;
+				border-width: 0 0 40px 40px;
+				border-color: transparent transparent $brand-primary transparent;
+			}
+		}
+		p, label, h4 {
+			color: white;
+		}
+	}
+	&__title {
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 40px;
+		color: white;
+
+		em {
+			color: $brand-warning;
+		}
+	}
+	&__item {
+		@include make-md-column(6);
+		margin-bottom: 20px;
+		.item-title {
+			color: $brand-primary;
+			font-size: 26px;
+			font-family: $font-family-block;
+			margin-bottom: 0;
+			@include clearfix();
+		}
+		.price {
+			float: right;
+			margin-right: 15px;
+			color: $brand-warning;
+		}
+		.item-content {
+			font-size: 15px;
+			font-style: italic;
+		}
+		&.full {
+			width: 100%;
+		}
+	}
+	.add-on {
+		margin: auto;
+		border-radius: 50%;
+		background: white;
+		border: 1px solid darken($brand-info, 10%);
+		width: 120px;
+		height: 120px;
+		text-align: center;
+		line-height: 120px;
+
+		img {
+			width: 75%;
+		}
+		&__title {
+			text-align: center;
+		}
+	}
+	&.no-bg {
+		.menu-card__content {
+			background: white;
+			box-shadow: none;
+			margin-top: 0;
+		}
+		.menu-card__title {
+			color: $brand-primary;
+		}
+		.corner {
+			display: none;
+		}
+		.add-on {
+			border-color: #fff8e1;
+		}
+		p, label, h4 {
+			color: $brand-primary;
+		}
+	}
+	.form-control {
+		border-color: #BE2F37;
+	}
+}
+.col-fifth {
+	@include make-xs-column(6);
+	@include make-sm-column(4);
+	@include make-md-column(2.4);
+}
+label {
+	font-weight: 600;
+	color: $brand-primary;
+}

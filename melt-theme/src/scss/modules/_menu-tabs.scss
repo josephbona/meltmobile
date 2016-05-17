@@ -1,0 +1,47 @@
+.menu-tabs {
+	max-width: 800px;
+	margin: auto;
+
+	&__title {
+		text-transform: uppercase;
+		text-align: center;
+	}
+	&__tabs {
+		@include clearfix();
+		background: $brand-info;
+
+		ul {
+			list-style: none;
+			margin: 0 auto;
+			padding: 0;
+			display: table;
+		}
+		li {
+			display: block;
+			float: left;
+
+			a {
+				display: block;
+				padding: 1em;
+				font-size: 18px;
+				text-transform: uppercase;
+				font-family: $headings-font-family;
+				text-align: center;
+
+				img {
+					display: block;
+					margin: 0 auto 4px auto;
+				}
+				&:hover, &:focus {
+					text-decoration: none;
+					background: darken($brand-info, 5%);
+				}
+			}
+		}
+	}
+	&__content {
+		background-color: #fffde5;
+		padding: 1em;
+
+	}
+}

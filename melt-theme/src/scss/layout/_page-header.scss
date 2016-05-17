@@ -1,0 +1,42 @@
+.page-header {
+	text-align: center;
+	padding: 2.5em 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	h1 {
+		color: white;
+		font-size: 45px;
+		@include text-shadow(1px, 1px, 10px, rgba(0,0,0,0.40));
+	}
+	h2 {
+		margin-top: 0;
+		padding-top: 0;
+		color: white;
+		@include text-shadow();
+	}
+	.breadcrumb-arrows {
+		display: none;
+	}
+	@include min-width(500px) {
+		padding: 4em 0;
+
+		h1 {
+			font-size: 55px;
+		}
+	}
+	@include min-width($screen-sm-min) {
+		padding: 10em 0;
+
+		h1 {
+			font-size: 5em;
+		}
+		.site-branding {
+			min-height: 150px;
+		}
+		.breadcrumb-arrows {
+			display: inline-block;
+		}
+	}
+}

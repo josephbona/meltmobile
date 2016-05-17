@@ -1,0 +1,71 @@
+body {
+	background-color: #431611;
+	background-image: url(../images/texture.png);
+	position: relative;
+}
+.container-fluid {
+	max-width: 1170px;
+}
+.show-on-hover {
+	@include max-width($grid-float-breakpoint-max) {
+		&:not(.open)>.dropdown-menu, &:not(.open):hover>.dropdown-menu {
+			display: none;
+		}
+	}
+	&:hover>.dropdown-menu {
+		display: block;
+	}
+}
+.margin-auto {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+section {
+	background-color: white;
+}
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+.main-content {
+	// background: url(../images/grate.jpg) -30px 20% no-repeat;
+	padding: 40px 0 80px;
+	background-color: white;
+
+	// &--home {
+	// 	.container {
+	// 		width: 100%;
+	// 	}
+	// }
+}
+
+.frame {
+    padding: 4px;
+    background: white;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.25);
+    border: 1px solid #ddd;
+}
+.skew {
+	@include min-width(520px) {
+		@include rotate(3deg);
+	}
+}
+.m-a{
+	margin-left: auto;
+	margin-right: auto;
+}
+.widget {
+	background: $brand-info;
+	padding: 10px;
+
+	h3 {
+		margin-top: 0;
+	}
+	&+ .widget {
+		margin-top: 20px;
+	}
+}
+.drop-shadow {
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
+}

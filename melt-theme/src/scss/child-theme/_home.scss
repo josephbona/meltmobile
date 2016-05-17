@@ -1,0 +1,85 @@
+.truck-status {
+	@include clearfix();
+	@include border-radius(5px);
+	display: table;
+	margin: 10px auto;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
+	background: white;
+
+	.fa-map-marker, .current-address, .btn-go {
+		float: left;
+		width: 60px;
+		line-height: 60px;
+	}
+	.fa-map-marker {
+		font-size: 35px;
+		color: white;
+		background: $brand-warning;
+		@include border-radius(4px 0 0 4px);
+		display: none;
+
+		@include min-width(600px) {
+			display: block;
+			float: left;
+		}
+	}
+	.current-address {
+		width: 100%;
+		display: block;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.2;
+		padding: 19px 25px;
+		text-align: center;
+
+		@include min-width(600px) {
+			width: auto;
+		}
+	}
+	.btn-go {
+		width: 100%;
+		background: $brand-warning;
+		font-weight: 600;
+		color: white;
+		@include border-radius(0 0 4px 4px);
+		@include transition(300ms);
+
+		i {
+			margin-left: 8px;
+		}
+		&:hover, &:focus {
+			text-decoration: none;
+			background: darken($brand-warning, 4%);
+		}
+		@include min-width(600px) {
+			display: block;
+			float: right;
+			width: 140px;
+			@include border-radius(0 4px 4px 0);
+			background: $brand-primary;
+
+			&:hover, &:focus {
+				background: darken($brand-primary, 4%);
+			}
+		}
+	}
+}
+.location-info {
+	padding: 1em;
+	border: 1px solid #ddd;
+	text-align: center;
+
+	.social-links {
+		@include clearfix();
+		margin-left: auto;
+		margin-right: auto;
+		display: table;
+	}
+	h4 {
+		color: $brand-warning;
+	}
+	p {
+		font-weight: 600;
+		color: $brand-primary;
+	}
+}

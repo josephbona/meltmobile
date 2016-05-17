@@ -1,0 +1,14 @@
+.site-header {
+	background-color: #431611;
+	background-image: url(../images/texture.png);
+
+	.logo {
+		display: block;
+		float: left;
+		line-height: 75px;
+
+		img {
+			height: 50px;
+		}
+	}
+}

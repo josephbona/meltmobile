@@ -1,0 +1,25 @@
+.social-buzz {
+	padding: 2em 0 100px;
+	.intro {
+		background-color: #431611;
+		background-image: url(../images/texture.png);
+	}
+	h2 {
+		font-family: $headings-font-family;
+		letter-spacing: 4px;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 25px;
+		color: $brand-info;
+		margin: 0 0 2rem 0;
+
+		span {
+			color: $brand-warning;
+		}
+	}
+	.instagram-media, .twitter-tweet, .fb-post {
+		margin: 0 auto 10px !important;
+		box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 1px 0px, rgba(0, 0, 0, 0.14902) 0px 1px 10px 0px;
+		@include border-radius(4px);
+	}
+}

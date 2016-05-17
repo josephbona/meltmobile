@@ -1,0 +1,137 @@
+.welcome {
+	.intro {
+		background: white;
+		font-family: $headings-font-family;
+		letter-spacing: 4px;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 25px;
+		color: $brand-primary;
+		padding: 2rem 0;
+		margin: 0;
+
+		span {
+			color: $brand-warning;
+		}
+		img {
+			margin-left: 8px;
+		}
+	}
+}
+.section-home {
+	@include clearfix();
+
+	&__image {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+	&__box {
+	    width: 92%;
+	    padding: 75px 100px;
+		
+		.heading {
+			text-transform: uppercase;
+			font-size: 20px;
+			margin: 0 0 5px;
+		}
+		.subheading {
+			text-transform: uppercase;
+			margin: 0 0 24px;
+			padding: 0;
+		}
+		.line {
+			border-bottom: 1px solid #be2f37;
+		    margin: 0 0 24px 0;
+		    width: 100px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 1.65;
+			margin-bottom: 24px;
+			font-weight: 300;
+			color: $brand-primary;
+		}
+	}
+	&--mobile {
+		@include min-width($screen-md-min) {
+			display: none;
+		}
+		.section-home__image {
+			min-height: 300px;
+		}
+		.section-home__box {
+			width: 100%;
+			padding: 50px;
+		}
+	}
+	&--desktop {
+		display: none;
+		@include min-width($screen-md-min) {
+			display: block;
+		}
+	}
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	&__intro {
+		padding: 100px 0;
+
+		.section-home__box {
+			width: 100%;
+			max-width: 960px;
+			padding: 0;
+			text-align: center;
+			margin: auto;
+		}
+		.line {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+.section-home--inverse {
+	.section-home__block {
+		background: $brand-primary;
+	}		
+	.heading {
+		color: white;
+	}
+	.subheading {
+		color: white;
+	}
+	.line {
+		border-bottom: 1px solid $brand-warning;
+	    margin: 0 0 24px 0;
+	    width: 100px;
+	}
+	p {
+		color: white;
+	}
+}
+.btn-outline {
+	@include transition(.5s);
+	@include border-radius(0);
+	color: #be2f37;
+	background-color: transparent;
+	border: 1px solid #be2f37;
+	font-weight: 300;
+	font-size: 18px;
+
+	&:hover, &:focus {
+		background-color: $brand-primary;
+		border-color: $brand-primary;
+		color: white;
+	}
+
+	&--inverse {
+		color: white;
+		border-color: $brand-warning;
+
+		&:hover, &:focus {
+			background-color: $brand-warning;
+			color: white;
+		}
+	}
+}
