@@ -80,7 +80,7 @@ Template Name: About Page
 					<img src="<?php bloginfo('template_directory'); ?>/images/bestof.png" alt="" class="img-responsive m-a">
 					<br>
 					<h2 class="heading">Voted the Number One Food Truck!</h2>
-					<p>Melt Mobile has been voted the best food truck in Connecticut 3 years running.</p>
+					<p>Melt Mobile has been voted the best food truck in Connecticut <br class="passive-break">3 years running.</p>
 				</div>
 			</div>
 		</div>

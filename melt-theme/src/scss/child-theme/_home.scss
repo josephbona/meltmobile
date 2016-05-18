@@ -1,12 +1,15 @@
 .truck-status {
 	@include clearfix();
 	@include border-radius(5px);
-	display: table;
+	display: none;
 	margin: 10px auto;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
 	background: white;
+	@include min-width(600px) {
+		display: table;
+	}
 
-	.fa-map-marker, .current-address, .btn-go {
+	.fa-map-marker, .current-address {
 		float: left;
 		width: 60px;
 		line-height: 60px;
@@ -36,30 +39,65 @@
 			width: auto;
 		}
 	}
-	.btn-go {
-		width: 100%;
-		background: $brand-warning;
-		font-weight: 600;
-		color: white;
-		@include border-radius(0 0 4px 4px);
-		@include transition(300ms);
+}
+.btn-go {
+	width: 100%;
+	background: $brand-warning;
+	font-weight: 600;
+	color: white;
+	@include border-radius(4px);
+	@include transition(300ms);
+	line-height: 40px;
+	display: block;
 
-		i {
-			margin-left: 8px;
-		}
+	i {
+		margin-left: 8px;
+	}
+	&:hover, &:focus {
+		text-decoration: none;
+		background: darken($brand-warning, 4%);
+	}
+	@include min-width(600px) {
+		float: right;
+		width: 140px;
+		line-height: 60px;
+		@include border-radius(0 4px 4px 0);
+		background: $brand-primary;
+
 		&:hover, &:focus {
-			text-decoration: none;
-			background: darken($brand-warning, 4%);
+			background: darken($brand-primary, 4%);
+			color: white;
 		}
-		@include min-width(600px) {
-			display: block;
-			float: right;
-			width: 140px;
-			@include border-radius(0 4px 4px 0);
-			background: $brand-primary;
+	}
+}
+.truck-status--mobile {
+	@include min-width(600px) {
+		display: none;
+	}
+	.btn-go {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 420px;
+	}
+	.btn-go + .btn-go {
+		margin-top: 5px;
+	}
+	.current-address {
+		color: white;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.2;
+		padding: 10px 0 20px;
+		text-align: center;
 
-			&:hover, &:focus {
-				background: darken($brand-primary, 4%);
+		span {
+			display: block;
+			font-size: 14px;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+
+			i {
+				margin-right: 8px;
 			}
 		}
 	}
@@ -81,5 +119,31 @@
 	p {
 		font-weight: 600;
 		color: $brand-primary;
+	}
+}
+.home .page-header {
+	background: url(../images/chalk-bg.jpg) !important;
+	padding: 1em 15px;
+
+	@include min-width(600px) {
+		background: none !important;
+		padding: 4em 0;
+	}
+	@include min-width($screen-sm-min) {
+		padding: 10em 0;
+	}
+	.backstretch {
+		display: none;
+
+		@include min-width(600px) {
+			display: block;
+		}
+	}
+}
+.fb-page, .twitter-timeline {
+	display: none !important;
+
+	@include min-width($screen-md-min) {
+		display: block !important;
 	}
 }

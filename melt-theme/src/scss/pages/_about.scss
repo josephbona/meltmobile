@@ -32,3 +32,9 @@
 		}
 	}
 }
+br.passive-break {
+	display: none;
+	@include min-width($screen-md-min) {
+		display: block;
+	}
+}

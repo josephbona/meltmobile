@@ -26,6 +26,12 @@ Template Name: Home Page
 			<div class="current-address"><?php echo get_option('melt-street-address'); ?> <?php echo get_option('melt-city'); ?>, <?php echo get_option('melt-state'); ?></div>
 			<a href="<?php echo home_url('/'); ?>contact/" class="btn-go">View Map<i class="fa fa-angle-right"></i></a>
 		</div>
+		<div class="truck-status--mobile">
+			<div class="current-address"><span><i class="fa fa-map-marker"></i>We Are Here:</span><?php echo get_option('melt-street-address'); ?> <?php echo get_option('melt-city'); ?>, <?php echo get_option('melt-state'); ?></div>
+			<a href="<?php echo home_url('/'); ?>contact/" class="btn-go">Get Directions</a>
+			<a href="tel:<?php echo get_theme_mod('melt_phone_number') ?>" class="btn-go">Call <?php echo get_theme_mod('melt_phone_number') ?></a>
+			<a href="<?php echo home_url('/'); ?>menu/" class="btn-go">View Our Menu</a>
+		</div>
 	</div>
 </section>
 <section id="content" class="main-content about">

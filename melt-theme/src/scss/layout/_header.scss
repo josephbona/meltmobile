@@ -8,7 +8,11 @@
 		line-height: 75px;
 
 		img {
-			height: 50px;
+			height: 42px;
+
+			@include min-width(350px) {
+				height: 50px;
+			}
 		}
 	}
 }
