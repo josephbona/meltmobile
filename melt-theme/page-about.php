@@ -46,7 +46,7 @@ Template Name: About Page
 	<div class="section section-quote">
 		<div class="container">
 			<div class="line text-center"></div>
-			<blockquote>Whether you're an old school grilled cheese tomato soup dipper,<br>or you're feeling a little more adventurous, it's all good.<br><strong>All that matters is that you Take It Cheesy...</strong></blockquote>
+			<blockquote>Whether you're an old school grilled cheese tomato soup dipper, <br>or you're feeling a little more adventurous, it's all good. <br><strong>All that matters is that you Take It Cheesy...</strong></blockquote>
 			<div class="line text-center"></div>
 		</div>
 	</div>

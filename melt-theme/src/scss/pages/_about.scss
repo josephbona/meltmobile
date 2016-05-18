@@ -25,4 +25,10 @@
 	.line {
 		border-color: $brand-warning;
 	}
+	br {
+		display: none;
+		@include min-width($screen-md-min) {
+			display: block;
+		}
+	}
 }
