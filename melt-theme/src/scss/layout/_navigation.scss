@@ -2,8 +2,12 @@
 	float: right;
 
 	li {
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 12px;
+		padding-right: 12px;
+		@include min-width($screen-lg-min) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 		a {
 			position: relative;
 			font-weight: 300;
