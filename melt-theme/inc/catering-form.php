@@ -116,7 +116,7 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-8">
-			<button class="btn btn-block btn-lg btn-info">Submit</button>
+			<button class="btn btn-block btn-lg btn-warning">Submit</button>
 		</div>
 	</div>
 </form>

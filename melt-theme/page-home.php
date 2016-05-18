@@ -28,6 +28,7 @@ Template Name: Home Page
 	$food_network_title2   			= types_render_field( "food-network-block-title-line-2", array( "raw"=>"true" ) );
 	$food_network_content   		= types_render_field( "food-network-block-content", array( "raw"=>"true" ) );
 	$food_network_video_url   		= types_render_field( "food-network-block-video-url", array( "raw"=>"true" ) );
+	$food_network_image		   		= types_render_field( "food-network-block-image", array( "raw"=>"true" ) );
 ?>
 <section class="board">
 	<img class="hidden-xs" src="<?php echo $banner_img_desktop; ?>" alt="">
@@ -91,10 +92,10 @@ Template Name: Home Page
 </section>
 <section class="section-home section-home--inverse">
 	<div class="row no-gutter section-home--mobile">
-		<div class="col-md-4 wow fadeInanimated section-home__image">
-			<div class="embed-responsive embed-responsive-16by9">
+		<div class="col-md-4 wow fadeInanimated section-home__image" data-mh="section-home-one" style="background-image: url('<?php echo $food_network_image; ?>');">
+			<!-- <div class="embed-responsive embed-responsive-16by9">
 				<iframe class="embed-responsive-item" width="640" height="388" src="<?php echo $food_network_video_url; ?>" frameborder="0" allowfullscreen=""></iframe>
-			</div>
+			</div> -->
 		</div>
 		<div class="section-home__block col-md-8 wow fadeIn">
 			<div class="section-home__box">
@@ -106,10 +107,10 @@ Template Name: Home Page
 		</div>
 	</div>
 	<div class="row no-gutter section-home--desktop">
-		<div class="col-md-5 wow fadeInLeft section-home__image" data-mh="section-home-one">
-			<div class="embed-responsive embed-responsive-16by9">
+		<div class="col-md-5 wow fadeInLeft section-home__image" data-mh="section-home-one" style="background-image: url('<?php echo $food_network_image; ?>');">
+			<!-- <div class="embed-responsive embed-responsive-16by9">
 				<iframe class="embed-responsive-item" width="640" height="388" src="<?php echo $food_network_video_url; ?>" frameborder="0" allowfullscreen=""></iframe>
-			</div>
+			</div> -->
 		</div>
 		<div class="section-home__block col-md-7 wow fadeInRight" data-mh="section-home-one">
 			<div class="section-home__box">

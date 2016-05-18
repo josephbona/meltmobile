@@ -35,7 +35,7 @@
 <header class="site-header">
 	<div class="container-fluid">
 		<div class="mobile-clearfix">
-			<a href="<?php echo home_url('/'); ?>" class="logo"><img src="<?php bloginfo('template_directory'); ?>/images/logo1.png" alt="Melt Mobile Food Truck"></a>
+			<a href="<?php echo network_home_url('/'); ?>" class="logo"><img src="<?php bloginfo('template_directory'); ?>/images/logo1.png" alt="Melt Mobile Food Truck"></a>
 			<div id="st-trigger-effects" class="column">
 				<button type="button" class="navbar-toggle collapsed" data-effect="st-effect-4">
 			        <i class="fa fa-bars"></i>

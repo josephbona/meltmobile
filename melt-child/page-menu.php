@@ -100,7 +100,7 @@ Template Name: Menu Page
 							</div>
 							<h4 class="add-on__title eh"><?php the_title(); ?></h4>
 						</div>
-						<?php $i += 0.5; ?>
+						<?php $i += 0.25; ?>
 					<?php
 						endwhile;
 						wp_reset_postdata();
