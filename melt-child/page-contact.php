@@ -96,6 +96,7 @@ Template Name: Contact Page
 		marker.addListener('click', function() {
 			infowindow.open(map, marker);
 		});
+		infowindow.open(map,marker);
 	}
 </script>
 <?php endwhile; endif; ?>
