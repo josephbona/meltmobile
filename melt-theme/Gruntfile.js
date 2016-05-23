@@ -21,6 +21,7 @@ module.exports = function(grunt) {
           'src/js/vendor/mobilenav.js',
           'src/js/vendor/backstretch.js',
           'src/js/vendor/wow.js',
+          'src/js/vendor/salvattore.js',
           'src/js/page-header.js',
     			'src/js/main.js',
     		],

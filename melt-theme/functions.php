@@ -15,6 +15,8 @@ if (function_exists('register_sidebar')) {
 	));
 }
 
+add_theme_support( 'post-formats', array( 'status' ) );
+
 //no the_content on homepage template
 
 add_action( 'init', 'remove_editor_init' );

@@ -20,23 +20,42 @@ Template Name: Say Cheeze Page
 </section>
 <section class="social-buzz" id="content">
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-4 hidden-xs">
-				<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/1yPn_HBP4_/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">&#34;Big Shirl&#34; kept it cheesy! Lunch from #MeltMobile today was perfect. #HeyStamford</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by heystamford (@heystamford) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-04-22T17:09:28+00:00">Apr 22, 2015 at 10:09am PDT</time></p></div></blockquote><script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-				<div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-post" data-href="https://www.facebook.com/MeltMobile/posts/986111341410903" data-width="500"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/MeltMobile/posts/986111341410903"><p>Best food truck ever</p>Posted by <a href="#" role="button">Jessica Anne Faugno</a> on&nbsp;<a href="https://www.facebook.com/MeltMobile/posts/986111341410903">Friday, September 4, 2015</a></blockquote></div></div>
-			</div>
-			<div class="col-sm-4">
-				<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Shout out to the <a href="https://twitter.com/hashtag/MeltMobile?src=hash">#MeltMobile</a> for making the best grilled cheese ever <a href="https://twitter.com/hashtag/humpdaytreat?src=hash">#humpdaytreat</a></p>&mdash; Laura Montanus (@_Laura_Ann_) <a href="https://twitter.com/_Laura_Ann_/status/570657609021128704">February 25, 2015</a></blockquote>
-				<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-				<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/7yyZpKAn9k/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Short Rib Grilled Cheese from @meltmobile</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Imran Jaffery (@ijaffery) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-09-19T01:21:42+00:00">Sep 18, 2015 at 6:21pm PDT</time></p></div></blockquote>
-				<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-			</div>
-			<div class="col-sm-4 hidden-xs">
-				<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/4E-yu7BP4u/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Keeping it cheesy w/the Short Rib Melt from #MeltMobile #HeyStamford</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by heystamford (@heystamford) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-06-18T16:50:45+00:00">Jun 18, 2015 at 9:50am PDT</time></p></div></blockquote>
-				<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-				<blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/bflay">@bflay</a> tried the Monte Cristo at the <a href="https://twitter.com/hashtag/MeltMobile?src=hash">#MeltMobile</a> today &amp; it was Awesome!!!</p>&mdash; Sasha.J (@iSasha_Fierce) <a href="https://twitter.com/iSasha_Fierce/status/185522246645846016">March 30, 2012</a></blockquote>
-				<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-			</div>
+		<div id="grid" data-columns>
+		<?php
+			$args = array(
+				'post_type' 		=> 'post',
+				'orderby'			=> 'ID',
+				'order'				=> 'DESC'
+			);
+			$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post();
+		?>
+			<?php if ( has_post_format( 'status' )) { ?>
+				<div class="post-status">
+					<?php the_content(); ?>
+				</div>
+			<?php } else { ?>
+				<?php $excerpt = get_the_excerpt() ?> 
+				<div class="post-standard">
+					<h2 class="post-title"><?php the_title(); ?></h2>
+					<div class="post-date">Posted on <?php the_time('F jS, Y'); ?></div>
+					<?php if (has_post_thumbnail()) { ?>
+						<!-- get featured image -->
+						<?php $featured_image = wp_get_attachment_url( get_post_thumbnail_id() ); ?>
+						<!-- display featured image -->
+						<div class="featured-image">
+							<a href="<?php the_permalink() ?>">
+								<img class="img-responsive margin-auto" src="<?php echo $featured_image; ?>" alt="<?php $thumb_id = get_post_thumbnail_id(get_the_ID()); $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true); if(count($alt)) echo $alt; ?>" />
+							</a>
+						</div>
+					<?php } ?>
+					<div class="post-excerpt">
+						<?php echo $excerpt; ?>
+					</div>
+					<a class="btn btn-block btn-warning btn-sm read-more" href="<?php the_permalink() ?>">Continue Reading <i class="fa fa-chevron-right"></i></a>
+				</div>
+			<?php } ?>
+		<?php endwhile; ?>
 		</div>
 	</div>
 </section>

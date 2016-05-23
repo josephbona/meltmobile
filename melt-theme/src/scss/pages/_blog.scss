@@ -1,0 +1,58 @@
+#grid[data-columns] {
+	&:before {
+		content: '1 .col-xs-12';		
+	}
+	@include min-width($screen-sm-min) {
+		&:before {
+			content: '2 .col-sm-6';
+		}
+	}
+	@include min-width($screen-md-min) {
+		&:before {
+			content: '3 .col-md-4';
+		}
+	}
+}
+.social-buzz {
+	padding: 2em 0 100px;
+}
+.post-status {
+	.instagram-media, .twitter-tweet, .fb-post, iframe {
+		margin: 0 auto 10px !important;
+		box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 1px 0px, rgba(0, 0, 0, 0.14902) 0px 1px 10px 0px;
+		@include border-radius(4px);
+		width: 100%;
+	}
+}
+.post-standard {
+	margin: 0 auto 10px !important;
+	box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 1px 0px, rgba(0, 0, 0, 0.14902) 0px 1px 10px 0px;
+	@include border-radius(4px);
+	padding: 10px;
+
+	.post-title {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 28px;
+	}
+	.post-date {
+		margin-bottom: 10px;
+		font-size: 14px;
+		color: $brand-warning;
+	}
+	.post-excerpt {
+		line-height: 1.38;
+		font-size: 14px;
+	}
+	.featured-image {
+		margin-bottom: 10px;
+	}
+	.read-more {
+		margin-top: 10px;
+
+		i {
+			font-size: 80%;
+			margin-left: 8px;
+		}
+	}
+}
