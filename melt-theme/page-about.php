@@ -73,7 +73,7 @@ Template Name: About Page
 				<div class="col-md-6 text-center">
 					<img src="<?php bloginfo('template_directory'); ?>/images/umbrella.png" alt="" class="img-responsive m-a">
 					<br>
-					<h2 class="heading">2% percent of our proceeds go to the Umbrella Club</h2>
+					<h2 class="heading">2% percent of our proceeds go to the Umbrella Club!</h2>
 					<p>A local charitable organization devoted to helping underprivileged children in need.</p>
 				</div>
 				<div class="col-md-6 text-center">
