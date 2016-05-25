@@ -15,7 +15,13 @@ function checkin_menu() {
 
 function melt_checkin_scripts() {
 	wp_register_style('melt_scripts', plugins_url('css/style.css',__FILE__ ));
+	wp_register_style('melt_timepicker_scripts', plugins_url('css/jquery-ui-timepicker-addon.css',__FILE__ ));
 	wp_enqueue_style('melt_scripts');
+	wp_enqueue_style('jquery-style', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
+	wp_enqueue_style('melt_timepicker_scripts');
+	wp_register_script('melt_timepicker_js', plugins_url('js/jquery-ui-timepicker-addon.js',__FILE__ ), array('jquery', 'jquery-ui-datepicker'));
+	wp_enqueue_script('jquery-ui-datepicker');
+	wp_enqueue_script('melt_timepicker_js');
 }
 add_action( 'admin_init','melt_checkin_scripts');
 
@@ -46,13 +52,24 @@ function melt_checkin_page() {
 			    		$latitude = esc_attr( get_option( 'melt-checkin-lat' ) );
 			    		$longitude = esc_attr( get_option( 'melt-checkin-long' ) );
 			    		$location_id = esc_attr( get_option( 'melt-checkin-location-id' ) );
+			    		$start_datetime = esc_attr( get_option( 'melt-checkin-start-datetime' ) );
+			    		$end_datetime = esc_attr( get_option( 'melt-checkin-end-datetime' ) );
 
-			    		update_truck_location($latitude, $longitude, $location_id, $street_address, $city, $state, $zipcode);
+			    		$description = date('Y-m-d H:i:s', strtotime($start_datetime)) . ' - ' . date('Y-m-d H:i:s', strtotime($end_datetime));
+			    		update_truck_location($latitude, $longitude, $location_id, $street_address, $city, $state, $zipcode, $description);
 
 						echo '<p>';
 						echo '<label for="melt-checkin-map-autocomplete">Enter Address</label>';
 					    echo '<input type="text" class="textinput" name="melt-checkin-map-autocomplete" id="melt-checkin-map-autocomplete" />';
 					    echo '</p>';
+				        echo '<p>';
+				    	echo '<label for="melt-checkin-start-datetime">Start Date/Time</label>';
+				        echo '<input type="text" class="textinput" name="melt-checkin-start-datetime" id="melt-checkin-start-datetime" value="'.$start_datetime.'" />';
+				        echo '</p>';
+				        echo '<p>';
+				    	echo '<label for="melt-checkin-end_datetime">End Date/Time</label>';
+				        echo '<input type="text" class="textinput" name="melt-checkin-end-datetime" id="melt-checkin-end-datetime" value="'.$end_datetime.'" />';
+				        echo '</p>';
 					    echo '<h3><span>Location Details</span></h3>';
 						echo '<p>';
 						echo '<label for="melt-street-address">Street Address</label>';
@@ -107,7 +124,7 @@ function render_locations_dropdown($location_id) {
 	echo '</p>';
 }
 
-function update_truck_location($latitude, $longitude, $location_id, $street_address, $city, $state, $zipcode) {
+function update_truck_location($latitude, $longitude, $location_id, $street_address, $city, $state, $zipcode, $description) {
 	if( $_REQUEST['settings-updated'] == true ) {
 		global $wpdb;
 		$wpdb->update(
@@ -118,7 +135,8 @@ function update_truck_location($latitude, $longitude, $location_id, $street_addr
 				'address' => $street_address,
 				'city' => $city,
 				'state' => $state,
-				'zip' => $zipcode
+				'zip' => $zipcode,
+				'description' => $description
 			),
 			array( 'wpsl_id' => $location_id ),
 			array(
@@ -127,7 +145,8 @@ function update_truck_location($latitude, $longitude, $location_id, $street_addr
 				'%s',
 				'%s',
 				'%s',
-				'%d'
+				'%d',
+				'%s'
 			),
 			array( '%d' )
 		);
@@ -160,6 +179,12 @@ function gmw_google_address_autocomplete() {
 	?>
 	<script>
 		jQuery(document).ready(function($) {
+
+		$('#melt-checkin-start-datetime, #melt-checkin-end-datetime').datetimepicker({
+			controlType: 'select',
+			timeFormat: 'hh:mmtt'
+		});
+
 		function parseGoogleResponse(components) {
 			var parsed_address = { street: '', number: '', city: '', state: '', zipcode: '' };
 			$.each(components, function(index, component) {
@@ -235,6 +260,8 @@ function register_melt_checkin_settings() {
 	register_setting( 'melt-checkin-settings-group', 'melt-city');
 	register_setting( 'melt-checkin-settings-group', 'melt-state');
 	register_setting( 'melt-checkin-settings-group', 'melt-zipcode');
+	register_setting( 'melt-checkin-settings-group', 'melt-checkin-start-datetime');
+	register_setting( 'melt-checkin-settings-group', 'melt-checkin-end-datetime');
 }
 
 if ( is_admin() ){

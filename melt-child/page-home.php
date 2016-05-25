@@ -16,22 +16,45 @@ Template Name: Home Page
 	$instagramURL 		= get_theme_mod('melt_instagram');
 	$hasFacebook		= $facebookURL && $facebookURL != '';
 	$hasTwitter			= $twitterURL && $twitterURL != '';
+
+	date_default_timezone_set('America/New_York');
+	$end_datetime = get_option('melt-checkin-end-datetime');
+	$d1 = date('Y-m-d H:i:s', strtotime($end_datetime));
+	$d1 = new DateTime($d1);
+	$d2 = date('Y-m-d H:i:s');
+	$d2 = new DateTime($d2);
+	$checkin_active = ($d1 > $d2);
 ?>
 <section id="masthead" class="page-header" role="banner">
 	<a class="skip-link screen-reader-text" href="#content" data-backstretch="<?php echo $image; ?>">Skip to content</a>
 	<div class="site-branding">
 		<h1 class="entry-title"><?php echo $sitename; ?></h1>
-		<div class="truck-status">
-			<i class="fa fa-map-marker"></i>
-			<div class="current-address"><?php echo get_option('melt-street-address'); ?> <?php echo get_option('melt-city'); ?>, <?php echo get_option('melt-state'); ?></div>
-			<a href="<?php echo home_url('/'); ?>contact/" class="btn-go">View Map<i class="fa fa-angle-right"></i></a>
-		</div>
-		<div class="truck-status--mobile">
-			<div class="current-address"><span><i class="fa fa-map-marker"></i>We Are Here:</span><?php echo get_option('melt-street-address'); ?> <?php echo get_option('melt-city'); ?>, <?php echo get_option('melt-state'); ?></div>
-			<a href="<?php echo home_url('/'); ?>contact/" class="btn-go">Get Directions</a>
-			<a href="tel:<?php echo get_theme_mod('melt_phone_number') ?>" class="btn-go">Call <?php echo get_theme_mod('melt_phone_number') ?></a>
-			<a href="<?php echo home_url('/'); ?>menu/" class="btn-go">View Our Menu</a>
-		</div>
+		<?php
+
+
+			if($checkin_active) { ?>
+				<div class="truck-status">
+					<i class="fa fa-map-marker"></i>
+					<div class="current-address"><?php echo get_option('melt-street-address'); ?> <?php echo get_option('melt-city'); ?>, <?php echo get_option('melt-state'); ?></div>
+					<a href="<?php echo home_url('/'); ?>contact/" class="btn-go">View Map<i class="fa fa-angle-right"></i></a>
+				</div>
+				<div class="truck-status--mobile">
+					<div class="current-address"><span><i class="fa fa-map-marker"></i>We Are Here:</span><?php echo get_option('melt-street-address'); ?> <?php echo get_option('melt-city'); ?>, <?php echo get_option('melt-state'); ?></div>
+					<a href="<?php echo home_url('/'); ?>contact/" class="btn-go">Get Directions</a>
+					<a href="tel:<?php echo get_theme_mod('melt_phone_number') ?>" class="btn-go">Call <?php echo get_theme_mod('melt_phone_number') ?></a>
+					<a href="<?php echo home_url('/'); ?>menu/" class="btn-go">View Our Menu</a>
+				</div>
+			<?php } else { ?>
+				<div class="truck-status">
+					<i class="fa fa-map-marker"></i>
+					<div class="current-address">We're not on the move right now.</div>
+				</div>
+				<div class="truck-status--mobile">
+					<div class="current-address">We're not on the move right now.</div>
+					<a href="tel:<?php echo get_theme_mod('melt_phone_number') ?>" class="btn-go">Call <?php echo get_theme_mod('melt_phone_number') ?></a>
+					<a href="<?php echo home_url('/'); ?>menu/" class="btn-go">View Our Menu</a>
+				</div>
+			<?php } ?>
 	</div>
 </section>
 <section id="content" class="main-content about">
@@ -46,7 +69,11 @@ Template Name: Home Page
 					<br>
 					<div class="location-info">
 						<h4><i class="fa fa-map-marker"></i> Current Location:</h4>
+						<?php if($checkin_active){ ?>
 						<p><?php echo get_option('melt-street-address'); ?><br><?php echo get_option('melt-city'); ?>, <?php echo get_option('melt-state'); ?> <?php echo get_option('melt-zipcode'); ?></p>
+						<?php } else {?>
+						<p>We're not on the move right now.</p>
+						<?php } ?>
 						<h4><i class="fa fa-phone"></i> Phone Number:</h4>
 						<p><?php echo get_theme_mod('melt_phone_number') ?></p>
 						<!-- SOCIAL LINKS -->

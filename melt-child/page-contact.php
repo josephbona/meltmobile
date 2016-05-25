@@ -15,8 +15,18 @@ Template Name: Contact Page
 	$instagramURL 		= get_theme_mod('melt_instagram');
 	// page subtitle
 	$subtitle   				= types_render_field( "page-subtitle", array( "raw"=>"true" ) );
+
+	date_default_timezone_set('America/New_York');
+	$end_datetime = get_option('melt-checkin-end-datetime');
+	$d1 = date('Y-m-d H:i:s', strtotime($end_datetime));
+	$d1 = new DateTime($d1);
+	$d2 = date('Y-m-d H:i:s');
+	$d2 = new DateTime($d2);
+	$checkin_active = ($d1 > $d2);
 ?>
+<?php if($checkin_active){ ?>
 <div class="contact-map" id="map"></div>
+<?php } ?>
 <section id="content" class="main-content page-about">
 	<div class="container">
 		<div class="entry-content">
@@ -31,7 +41,11 @@ Template Name: Contact Page
 				<div class="col-md-3 col-md-offset-1">
 					<div class="location-info">
 						<h4><i class="fa fa-map-marker"></i> Current Location:</h4>
+						<?php if($checkin_active){ ?>
 						<p><?php echo get_option('melt-street-address'); ?><br><?php echo get_option('melt-city'); ?>, <?php echo get_option('melt-state'); ?> <?php echo get_option('melt-zipcode'); ?></p>
+						<?php } else {?>
+						<p>We're not on the move right now.</p>
+						<?php } ?>
 						<h4><i class="fa fa-phone"></i> Phone Number:</h4>
 						<p><?php echo get_theme_mod('melt_phone_number') ?></p>
 						<?php

@@ -695,7 +695,18 @@ function makeAjaxRequest( startLatLng, resetMap, autoLoad ) {
 					};
 
 					latLng = new google.maps.LatLng( response[index].lat, response[index].lng );
-					addMarker( latLng, response[index].id, infoWindowData, draggable );
+					//nowDate
+					var nowDate = new Date();
+					//Checkin datetime (here we strip the <p></p> tags)
+					var checkinDates = response[index].description.replace(/(<([^>]+)>)/ig,"");
+					// @TODO: save this as a new Date() - http://stackoverflow.com/questions/3505693/difference-between-datedatestring-and-new-datedatestring
+					var startDate = checkinDates.split(" - ")[0];
+					var endDate = new Date(checkinDates.split(" - ")[1]);
+					//If checkin endDate > nowDate addMarker()
+					if(endDate > nowDate){
+						addMarker( latLng, response[index].id, infoWindowData, draggable );
+						console.log(response[index].store + ' is plotted');
+					};
 					storeData = storeData + storeHtml( response[index], url );
 					$( "#wpsl-reset-map" ).show();
 				});
@@ -1230,8 +1241,46 @@ function storeHtml( response, url ) {
 	if ( ( typeof( response.address2 ) !== "undefined" ) && ( response.address2 !== "" ) ) {
 		address2 = "<span class='wpsl-street'>" + response.address2 + "</span>";
 	}
+	//nowDate
+	var nowDate = new Date();
+	//Checkin datetime (here we strip the <p></p> tags)
+	var checkinDates = response.description.replace(/(<([^>]+)>)/ig,"");
 
-	html = "<li data-store-id='" + id + "'><div><p class='store-link'>" + storeImg + "<strong>" + store + "</strong></p><div class='row'><div class='col-sm-8'><p class='padd'><span class='wpsl-street'>" + address + "</span>" + address2 + city + ", " + state + " " + zip + "</p></div><div class='col-sm-4'><span class='distance'>" + distance + "<em>away</em></span></div></div><p class='text-center'>" + "<a class='btn btn-xs btn-warning' " + storeUrlTarget + " href='" + response.url + "'>View Truck Website &raquo;</a></p></li>";
+	var startDate = new Date(checkinDates.split(" - ")[0]);
+	var startHour = startDate.getHours();
+	var startMinute = startDate.getMinutes();
+	startMinute = startMinute<10?'0'+startMinute:startMinute;
+	var startDD = 'AM';
+	if(startHour >= 12) {
+		startHour = startHour-12;
+		startDD = 'PM';
+	}
+	if(startHour == 0) {
+		startHour = 12;
+	}
+
+	var endDate = new Date(checkinDates.split(" - ")[1]);
+	var endHour = endDate.getHours();
+	var endMinute = endDate.getMinutes();
+	endMinute = endMinute<10?'0'+endMinute:endMinute;
+	var endDD = 'AM';
+	if(endHour >= 12) {
+		endHour = endHour-12;
+		endDD = 'PM';
+	}
+	if(endHour == 0) {
+		endHour = 12;
+	}
+
+	//If checkin endDate > nowDate give address
+	if(endDate > nowDate){
+		html = "<li data-store-id='" + id + "'><div><p class='store-link'>" + storeImg + "<strong>" + store + "</strong></p><div class='row'><div class='col-sm-8'><p class='padd'><span class='wpsl-street'>" + address + "</span>" + address2 + city + ", " + state + " " + zip + "<br><small><strong>From " + startHour + ":" + startMinute + startDD + " - " + endHour + ":" + endMinute + endDD + "</strong></small></p></div><div class='col-sm-4'><span class='distance'>" + distance + "<em>away</em></span></div></div><p class='text-center'>" + "<a class='btn btn-xs btn-warning' " + storeUrlTarget + " href='" + response.url + "'>View Truck Website &raquo;</a></p></li>";
+		console.log(response.store + ' in service');
+	} else {
+		html = "<li data-store-id='" + id + "'><div><p class='store-link'>" + storeImg + "<strong>" + store + "</strong></p><p class='padd' style='text-align:center;'>Bummer, this truck is not on the move yet.<br>Check back often for updates!</p><p class='text-center'>" + "<a class='btn btn-xs btn-warning' " + storeUrlTarget + " href='" + response.url + "'>View Truck Website &raquo;</a></p></li>";
+		console.log(response.store + ' not in service');
+	};
+
 	// html = "<li data-store-id='" + id + "'><div><p>" + storeImg + "<strong>" + store + "</strong><span class='wpsl-street'>" + address + "</span>" + address2 + city + " " + state + " " + zip + "<span class='wpsl-country'>" + country + "</span></p>" + moreInfo + "</div>" + distance + "<a class='wpsl-directions' " + url.target + " href='" + url.src + "'>" + wpslLabels.directions + "</a></li>";
 
 	return html;
