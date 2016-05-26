@@ -700,10 +700,10 @@ function makeAjaxRequest( startLatLng, resetMap, autoLoad ) {
 					//Checkin datetime (here we strip the <p></p> tags)
 					var checkinDates = response[index].description.replace(/(<([^>]+)>)/ig,"");
 					// @TODO: save this as a new Date() - http://stackoverflow.com/questions/3505693/difference-between-datedatestring-and-new-datedatestring
-					var startDate = checkinDates.split(" - ")[0];
+					var startDate = new Date(checkinDates.split(" - ")[0]);
 					var endDate = new Date(checkinDates.split(" - ")[1]);
 					//If checkin endDate > nowDate addMarker()
-					if(endDate > nowDate){
+					if(endDate > nowDate && startDate < nowDate){
 						addMarker( latLng, response[index].id, infoWindowData, draggable );
 						console.log(response[index].store + ' is plotted');
 					};
@@ -1273,7 +1273,7 @@ function storeHtml( response, url ) {
 	}
 
 	//If checkin endDate > nowDate give address
-	if(endDate > nowDate){
+	if(endDate > nowDate && startDate < nowDate){
 		html = "<li data-store-id='" + id + "'><div><p class='store-link'>" + storeImg + "<strong>" + store + "</strong></p><div class='row'><div class='col-sm-8'><p class='padd'><span class='wpsl-street'>" + address + "</span>" + address2 + city + ", " + state + " " + zip + "<br><small><strong>From " + startHour + ":" + startMinute + startDD + " - " + endHour + ":" + endMinute + endDD + "</strong></small></p></div><div class='col-sm-4'><span class='distance'>" + distance + "<em>away</em></span></div></div><p class='text-center'>" + "<a class='btn btn-xs btn-warning' " + storeUrlTarget + " href='" + response.url + "'>View Truck Website &raquo;</a></p></li>";
 		console.log(response.store + ' in service');
 	} else {

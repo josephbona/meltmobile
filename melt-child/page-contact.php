@@ -17,12 +17,15 @@ Template Name: Contact Page
 	$subtitle   				= types_render_field( "page-subtitle", array( "raw"=>"true" ) );
 
 	date_default_timezone_set('America/New_York');
-	$end_datetime = get_option('melt-checkin-end-datetime');
-	$d1 = date('Y-m-d H:i:s', strtotime($end_datetime));
+	$start_datetime = get_option('melt-checkin-start-datetime');
+	$d1 = date('Y-m-d H:i:s', strtotime($start_datetime));
 	$d1 = new DateTime($d1);
 	$d2 = date('Y-m-d H:i:s');
 	$d2 = new DateTime($d2);
-	$checkin_active = ($d1 > $d2);
+	$end_datetime = get_option('melt-checkin-end-datetime');
+	$d3 = date('Y-m-d H:i:s', strtotime($end_datetime));
+	$d3 = new DateTime($d3);
+	$checkin_active = ($d1 < $d2 && $d3 > $d2);
 ?>
 <?php if($checkin_active){ ?>
 <div class="contact-map" id="map"></div>
