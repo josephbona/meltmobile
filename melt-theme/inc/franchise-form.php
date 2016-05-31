@@ -57,10 +57,10 @@
 					<div class="form-group">
 						<label for="Field9">Best Time To Contact You</label>
 						<select name="Field9" id="Field9" class="form-control">
-							<option>Any Time</option>
-							<option>Morning</option>
-							<option>Afternoon</option>
-							<option>Evening</option>
+							<option value="Any Time">Any Time</option>
+							<option value="Morning">Morning</option>
+							<option value="Afternoon">Afternoon</option>
+							<option value="Evening">Evening</option>
 						</select>
 					</div>
 				</div>
@@ -78,8 +78,8 @@
 					<div class="form-group">
 						<label for="Field11">Interested In</label>
 						<select name="Field11" id="Field11" class="form-control">
-							<option>Single Location Opportunity</option>
-							<option>Multi-Unit Opportunity</option>
+							<option value="Single Location Opportunity">Single Location Opportunity</option>
+							<option value="Multi-Unit Opportunity">Multi-Unit Opportunity</option>
 						</select>
 					</div>
 				</div>
@@ -87,10 +87,10 @@
 					<div class="form-group">
 						<label for="Field12">Timeline To Open</label>
 						<select name="Field12" id="Field12"class="form-control">
-							<option>Immediately</option>
-							<option>1-6 Months</option>
-							<option>6 Months - 1 Year</option>
-							<option>Not Sure</option>
+							<option value="Immediately">Immediately</option>
+							<option value="1-6 Months">1-6 Months</option>
+							<option value="6 Months - 1 Year">6 Months - 1 Year</option>
+							<option value="Not Sure">Not Sure</option>
 						</select>
 					</div>
 				</div>
@@ -100,10 +100,11 @@
 					<div class="form-group">
 						<label for="Field13">Your Net Worth</label>
 						<select name="Field13" id="Field13" class="form-control">
-							<option>$100,000 - $250,000</option>
-							<option>$250,000 - $500,000</option>
-							<option>$500,000 - $1,000,000</option>
-							<option>Over $100,000,000</option>
+							<option value="$50,000 - $100,000">$50,000 - $100,000</option>
+							<option value="$100,000 - $150,000">$100,000 - $150,000</option>
+							<option value="$150,000 - $200,000">$150,000 - $200,000</option>
+							<option value="$200,000 - $250,000">$200,000 - $250,000</option>
+							<option value="Over $250,000">Over $250,000</option>
 						</select>
 					</div>
 				</div>
@@ -111,9 +112,11 @@
 					<div class="form-group">
 						<label for="Field14">Available Capital</label>
 						<select name="Field14" id="Field14" class="form-control">
-							<option>$50,000 - $150,000</option>
-							<option>$150,000 - $250,000</option>
-							<option>Over $250,000</option>
+							<option value="$50,000 - $100,000">$50,000 - $100,000</option>
+							<option value="$100,000 - $150,000">$100,000 - $150,000</option>
+							<option value="$150,000 - $200,000">$150,000 - $200,000</option>
+							<option value="$200,000 - $250,000">$200,000 - $250,000</option>
+							<option value="Over $250,000">Over $250,000</option>
 						</select>
 					</div>
 				</div>
