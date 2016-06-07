@@ -38,7 +38,7 @@ Template Name: Catering Page
 						<img class="img-responsive skew frame" src="<?php echo $image; ?>" alt="">
 					<?php } ?>
 				</div>
-				<div class="col-md-8 col-md-offset-2">
+				<!-- <div class="col-md-8 col-md-offset-2">
 					<br><br>
 					<div class="line text-center"></div>
 					<h3 class="text-center">Want More Info?</h3>
@@ -50,6 +50,18 @@ Template Name: Catering Page
 					</div>
 					<br><br>
 					<div class="line text-center"></div>
+				</div> -->
+				<div class="col-md-8 col-md-offset-2">
+					<br><br>
+					<div class="line text-center"></div>
+					<h3 class="text-center">Want More Info?</h3>
+					<p class="text-center">Please fill out our catering form and we will provide you with further details.</p>
+					<div class="menu-card">
+						<div class="menu-card__content">
+							<h1 class="menu-card__title">Catering &amp; Event Contact Form</h1>
+							<?php include (TEMPLATEPATH . '/inc/catering-form.php'); ?>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
